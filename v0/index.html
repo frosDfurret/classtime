@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>replit</title>
+    <title>classtime!</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    Hello world
-    <script src="script.js"></script>
-  </body>
+    <script src="./js/timer.js" defer></script>
+</head>
+
+<body>
+  <div id="content-container">
+    <div id="time-container">
+      <div id="time">
+        0:00
+      </div>
+    </div>
+    <div id="period-container" class="time">
+      <div id="current-period" class="time">
+        ?
+      </div>
+       | 
+      <div id="period-title" class="time">
+        Loading.
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
