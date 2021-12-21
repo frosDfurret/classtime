@@ -58,16 +58,17 @@ var timerMinutes = null;
 var timerSeconds = null;
 
 //check if params even exist
-if (urlParams["times"] == undefined) {
+if (urlParams["pn"] == undefined) {
 	error = true
 }
 
 //sets periods as local variables
 if (error == false) {
-  periodTimes = atob(JSON.parse(urlParams["times"]))
-	var periodNumber = periodTimes.length
-	periodTitles = atob(JSON.parse(urlParams["titles"]))
-	periodIcons = atob(JSON.parse(urlParams["icons"]))
+	var periodNumber = urlParams["pn"]
+	for (var i = 0; i < periodNumber; i++) {
+		periodTimes.push(urlParams["p" + i])
+    periodTitles.push(atob(urlParams["d" + i]))
+  }
 } else {
   //below are example times and stuff
 	var periodNumber = 16
